@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+    paths-ignore: 
+      - 'Dockerfile'
+  pull_request:
+    branches: [ master ]
+    paths-ignore:
+      - 'Dockerfile'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pass
+      run: echo OK
